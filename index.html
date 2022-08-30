@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ accordion card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="img-desing">
+            <img src="img/bg-pattern-desktop.svg" class="img-plaform">
+            <img src="img/illustration-woman-online-desktop.svg" class="img-card">
+            <img src="img/illustration-box-desktop.svg" class="img-box">
+        </div>
+        
+        <div class="container-info">
+            <h1>FAQ</h1>
+            <div class="item-text">
+                <div class="item-question" onclick="viewResponce('Question1', 'titulo1')" >
+                    <p class="title-item" id="titulo1">How many team members can I invite?</p>
+                    <img src="img/icon-arrow-down.svg" class="icon-arrow">
+                </div>
+                <p class="text-reponse" id="Question1">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+            </div>
+            <hr>
+            <div class="item-text">
+                <div class="item-question" onclick="viewResponce('Question2', 'titulo2')">
+                    <p class="title-item" id="titulo2">What is the maximum file upload size?</p>
+                    <img src="img/icon-arrow-down.svg" class="icon-arrow">
+                </div>
+                <p class="text-reponse" id="Question2">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+            </div>
+            <hr>
+            <div class="item-text">
+                <div class="item-question" onclick="viewResponce('Question3', 'titulo3')">
+                    <p class="title-item" id="titulo3">How do I reset my password?</p>
+                    <img src="img/icon-arrow-down.svg" class="icon-arrow">
+                </div>
+                <p class="text-reponse" id="Question3">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+            </div>
+            <hr>
+            <div class="item-text">
+                <div class="item-question" onclick="viewResponce('Question4', 'titulo4')">
+                    <p class="title-item" id="titulo4">Can I cancel my subscription?</p>
+                    <img src="img/icon-arrow-down.svg" class="icon-arrow">
+                </div>
+                <p class="text-reponse" id="Question4">Yes! Send us a message and we’ll process your request no questions asked.</p>
+            </div>
+            <hr>
+            <div class="item-text">
+                <div class="item-question" onclick="viewResponce('Question5', 'titulo5')">
+                    <p class="title-item" id="titulo5">Do you provide additional support?</p>
+                    <img src="img/icon-arrow-down.svg" class="icon-arrow">
+                </div>
+                <p class="text-reponse" id="Question5">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <script>
+        function viewResponce(question, item){
+            // var textNotview = document.getElementsByClassName("text-reponse");
+            // var textStrong = document.getElementsByClassName("title-item");
+            // textNotview.classList.remove('view-reponse');
+            // textStrong.classList.remove('title-item-strong');
+
+            var elemento = document.getElementById(question);
+            var elementquestion = document.getElementById(item);
+
+            if (elementquestion.classList.contains('title-item-strong')){
+                elemento.classList.remove('view-reponse');
+                elementquestion.classList.remove('title-item-strong');
+            }else{
+                elemento.classList.add('view-reponse');
+                elementquestion.classList.add('title-item-strong');
+            }
+            
+        }
+    </script>
+</body>
+</html>
